@@ -6,7 +6,6 @@ import Header from './HeaderComponents/Header'
 import AllArt from './AllArt'
 import Artwork from './Artwork'
 import Categories from './CategoryComponents/Categories'
-
 import Paintings from './CategoryComponents/Paintings'
 import Watercolor from './CategoryComponents/Watercolor'
 import Photographs from './CategoryComponents/Photographs'

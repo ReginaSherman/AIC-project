@@ -5,9 +5,10 @@ import PageNumbers from './PageNumbers'
 
 const AllArt = () => {
     const [ art, setArt ] = useState([])
+    const [ page, setPage ] = useState(1)
 
     useEffect(() => {
-        const url = 'https://api.artic.edu/api/v1/artworks/search?q=&fields=id,image_id,title,artist_title&limit=20'
+        const url = `https://api.artic.edu/api/v1/artworks/search?q=&fields=id,image_id,title,artist_title&limit=20&page=${ page }`
         fetch(url)
             .then((res) => res.json())
             .then((json) => {
@@ -16,10 +17,10 @@ const AllArt = () => {
                 
             })
             .catch(console.error)
-    }, [])
+    }, [ page ])
     return (
       <section>
-        <PageNumbers  />
+        <PageNumbers  page={ page } setPage={ setPage }/>
         <Row xs ='4'>
           {art.map(artwork => {
                 return (
