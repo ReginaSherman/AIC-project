@@ -1,18 +1,40 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Container, ListGroup, ListGroupItem } from 'reactstrap'
 
 const Categories = () => {
-    return (
-        <div>
-            <ul>
-            <h1>Categories</h1>
-            <li><Link to='/CategoryResults'>Painting</Link></li>
-            <li><Link to='/photograph'>Photograph</Link></li>
-            <li><Link to='/drawing-watercolor'>Drawing & Watercolor</Link></li>
-            <li><Link to='/print'>Print</Link></li>
-            </ul>
-        </div>
-    )
+  return (
+    <div>
+      <Container>
+        <ListGroup flush>
+          <ListGroupItem
+            href='/painting'
+            tag="a"
+          >
+            Painting
+          </ListGroupItem>
+          <ListGroupItem
+            href='/watercolor'
+            tag="a"
+          >
+            Watercolor
+          </ListGroupItem>
+          <ListGroupItem
+            href='/drawing'
+            tag="a"
+          >
+            Drawing
+          </ListGroupItem>
+          <ListGroupItem
+            href='/photograph'
+            tag="a"
+          >
+            Photography
+          </ListGroupItem>
+        </ListGroup>
+      </Container>
+
+    </div>
+  )
 }
 
 export default Categories

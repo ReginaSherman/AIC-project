@@ -38,12 +38,15 @@ li {
   color: palevioletred;
 }
 
-.page-item.active .page-link {
-  background-color: palevioletred;
+.button {
+  color: palevioletred;
   border-color: palevioletred;
+  background-color: white;
+  justify-content: end;
 }
- .pagination {
-   justify-content: end;
- }
+
+.list-group-item {
+  color:palevioletred;
+}
 
 
