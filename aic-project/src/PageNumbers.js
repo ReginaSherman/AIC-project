@@ -7,9 +7,9 @@ const decrementPage = () => setPage(page-1)
 const incrementPage = () => setPage(page+1)
     return (
         
-      <div>
+      <div className='pagination'>
         <Button className='button' outline onClick={ decrementPage }>Previous</Button>
-        { page }
+        <h4>{ page }</h4>
         <Button className='button' outline onClick={ incrementPage }>Next</Button>
       </div>
 

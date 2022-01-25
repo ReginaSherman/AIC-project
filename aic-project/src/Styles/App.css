@@ -9,15 +9,13 @@
   text-align: center;
 }
 
-
 .header {
   margin: 20px;
   text-align: center;
   color: palevioletred;
-  font-family:serif;
-  font-style:italic;
+  font-family: serif;
+  font-style: italic;
 }
-
 
 li {
   list-style: none;
@@ -42,11 +40,18 @@ li {
   color: palevioletred;
   border-color: palevioletred;
   background-color: white;
-  justify-content: end;
 }
 
+.pagination {
+  display: inline-flex;
+}
+
+h4 {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: palevioletred;
+  
+}
 .list-group-item {
-  color:palevioletred;
+  color: palevioletred;
 }
-
-
