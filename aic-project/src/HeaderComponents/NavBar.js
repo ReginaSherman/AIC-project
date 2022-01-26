@@ -12,7 +12,6 @@ const NavBar = () => {
             <NavItem>
               <NavLink className='right' href="/categories">Categories</NavLink>
             </NavItem>
-            <NavLink className='right' href="/search">Search</NavLink>
           </Nav>
         </Navbar>
         

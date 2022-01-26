@@ -12,7 +12,6 @@ import Watercolor from './CategoryComponents/Watercolor'
 import Photographs from './CategoryComponents/Photographs'
 import Drawing from './CategoryComponents/Drawing'
 import PageNumbers from './PageNumbers'
-import Search from './CategoryComponents/Search'
 
 const App = () => {
 
@@ -25,7 +24,6 @@ const App = () => {
           <Route exact path='/' element={ <AllArt /> } />
           <Route path={ '/:page' } element={ <PageNumbers /> } />
           <Route path='/categories' element={ <Categories /> } />
-          <Route path='/search' element={ <Search /> } />
           <Route path='/artwork/:id' element={ <Artwork /> } />
           <Route path='/painting' element={ <Paintings /> }/>
           <Route path='/watercolor' element={ <Watercolor /> } />

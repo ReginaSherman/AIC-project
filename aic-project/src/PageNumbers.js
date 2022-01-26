@@ -8,7 +8,7 @@ const PageNumbers = ({ page, setPage }) => {
       <div>
         <Container className='pagination'>
           <Button className='button' outline onClick={ decrementPage }>Previous</Button>
-          <h7>Page: {page} </h7>
+          <p className='pageNum'>Page: {page} </p>
           <Button className='button' outline onClick={ incrementPage }>Next</Button>
         </Container>
       </div>
