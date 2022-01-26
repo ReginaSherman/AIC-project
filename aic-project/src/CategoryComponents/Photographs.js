@@ -19,33 +19,34 @@ const Paintings = () => {
       <Row xs='3'>
         {art.map(artwork => {
           return (
-            <Container>
-              <div>
-                <Card>
-                  <Link to={ `/artwork/${ artwork.id }` } key={ artwork.id }>
-                    <CardImg
+            artwork.image_id !== null ?
+              <Container>
+                <div>
+                  <Card>
+                    <Link to={ `/artwork/${ artwork.id }` } key={ artwork.id }>
+                      <CardImg
                       alt={ artwork.title }
                       src={ `https://www.artic.edu/iiif/2/${ artwork.image_id }/full/843,/0/default.jpg` }
                       top
                       width="50%"
                     />
-                  </Link>
-                </Card>
-                <Card>
-                  <CardBody>
-                    <CardTitle tag="h5">
-                      {artwork.title}
-                    </CardTitle>
-                    <CardSubtitle
+                    </Link>
+                  </Card>
+                  <Card>
+                    <CardBody>
+                      <CardTitle tag="h5">
+                        {artwork.title}
+                      </CardTitle>
+                      <CardSubtitle
                       className="mb-2 text-muted"
                       tag="h6"
                     >
-                      {artwork.artist_title}
-                    </CardSubtitle>
-                  </CardBody>
-                </Card>
-              </div>
-            </Container>
+                        {artwork.artist_title}
+                      </CardSubtitle>
+                    </CardBody>
+                  </Card>
+                </div>
+              </Container> : null
           )
         })}
       </Row>

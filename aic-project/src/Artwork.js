@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Card, CardImg, CardText, Spinner } from 'reactstrap'
 import { useParams } from 'react-router-dom'
+import './Styles/Artwork.css'
 
 const Artwork = () => {
     const { id } = useParams()
@@ -23,18 +24,21 @@ const Artwork = () => {
       <div>
         <h1>{ art.title } - {art.date_end}</h1>
         <Card>
-          <CardImg
+          <CardImg className='card-img'
                     alt="Card image cap"
                     src={ `https://www.artic.edu/iiif/2/${ art.image_id }/full/843,/0/default.jpg` }
                     top width="50%"
                 />
         </Card>
-        <Card body>
+        <Card body className='card-body'>
           <CardText>
             { art.artist_title } 
           </CardText>
           <CardText>
-                    
+            Place of Origin: { art.place_of_origin }
+          </CardText>
+          <CardText>
+            Medium: {art.medium_display}
           </CardText>
           <CardText>
             Category: { art.artwork_type_title }
@@ -42,6 +46,10 @@ const Artwork = () => {
           <CardText>
             { art.copyright_notice }
           </CardText>
+          <CardText>
+            href=http://artic.edu/artworks/{art.id}
+          </CardText>
+
         </Card>
       </div >
     )

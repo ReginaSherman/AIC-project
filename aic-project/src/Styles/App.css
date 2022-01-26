@@ -44,9 +44,11 @@ li {
 
 .pagination {
   display: inline-flex;
+  justify-content: end;
 }
 
-h4 {
+h7 {
+  margin-top: 5px;
   margin-left: 20px;
   margin-right: 20px;
   color: palevioletred;

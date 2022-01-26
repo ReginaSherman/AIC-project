@@ -1,15 +1,16 @@
 import React from 'react'
-import { Button } from 'reactstrap'
+import { Button, Container } from 'reactstrap'
 
 const PageNumbers = ({ page, setPage }) => {
-const decrementPage = () => setPage(page-1)
-const incrementPage = () => setPage(page+1)
+    const decrementPage = () => page > 1 ? setPage(page - 1) : null
+    const incrementPage = () => setPage(page + 1)
     return (
-        
-      <div className='pagination'>
-        <Button className='button' outline onClick={ decrementPage }>Previous</Button>
-        <h4>{ page }</h4>
-        <Button className='button' outline onClick={ incrementPage }>Next</Button>
+      <div>
+        <Container className='pagination'>
+          <Button className='button' outline onClick={ decrementPage }>Previous</Button>
+          <h7>Page: {page} </h7>
+          <Button className='button' outline onClick={ incrementPage }>Next</Button>
+        </Container>
       </div>
     )
 }
