@@ -47,7 +47,7 @@ const Artwork = () => {
             { art.copyright_notice }
           </CardText>
           <CardText>
-            href=http://artic.edu/artworks/{art.id}
+            
           </CardText>
 
         </Card>
